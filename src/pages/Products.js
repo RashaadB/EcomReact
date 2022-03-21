@@ -1,7 +1,7 @@
 import React from "react";
 import heroImg1 from "../img/girl.jpeg.crdownload";
 import heroImg2 from "../img/pink.jpeg";
-import heroImg3 from "../img/rsb.jpg";
+import heroImg3 from "../img/skate_team.jpeg";
 import brown from "../img/brown.jpeg";
 import sadGirl from "../img/sad_girl.jpeg";
 import threeNine from "../img/nine_three.jpeg";
@@ -14,6 +14,7 @@ import chocolate from "../img/coco.jpeg";
 import retro from "../img/nine_three_black.jpeg";
 import carolinaGirl from "../img/carolina_blu.jpeg";
 import tangerine from "../img/orange.jpeg";
+import mainProducts from "../partials/_products.scss"
 
 const Products = () => {
   return (

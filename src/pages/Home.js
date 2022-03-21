@@ -3,6 +3,7 @@ import Rsb from "../img/rsb.jpg";
 import hero from "../img/halfpipe.jpeg";
 import rail from "../img/skate.jpeg";
 import boardslide from "../img/boardslide.jpeg";
+import mainHome from "../partials/_home.scss"
 
 const Home = () => {
   return (
