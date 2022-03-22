@@ -1,8 +1,6 @@
 import React from "react";
-import Rsb from "../img/rsb.jpg";
-import hero from "../img/halfpipe.jpeg";
-import rail from "../img/skate.jpeg";
-import boardslide from "../img/boardslide.jpeg";
+
+
 import mainHome from "../partials/_home.scss";
 import Data from "../products.json";
 
@@ -49,9 +47,9 @@ const Home = () => {
       {console.log(Data[0])}
       <header
         className="hero__wrap"
-        style={{ backgroundImage: `url(${hero})` }}
+        style={{ backgroundImage: 'url("./img/halfpipe.jpeg")'}}
       >
-        <img className="logo_rsb" src={Rsb} alt="logo" />
+        <img className="logo_rsb" src="./img/rsb.jpg" alt="logo" />
 
         <div className="header-content">
           <p>Don't skate without updated accessories.</p>
@@ -71,7 +69,7 @@ const Home = () => {
       <section>
         <div className="row">
           <div className="column">
-            <img className="rail" src={rail} alt="skating_rail" />
+            <img className="rail" src="../img/skate.jpeg" alt="skating_rail" />
           </div>
           <div className="column">
             <h2 className="RSB">RSB SKATESHOP</h2>
@@ -91,7 +89,7 @@ const Home = () => {
       <section>
         <div className="row">
           <div className="column">
-            <img className="rail" src={boardslide} alt="boardsliding" />
+            <img className="rail" src="../img/boardslide.jpeg" alt="boardsliding" />
           </div>
 
           <div className="column">
