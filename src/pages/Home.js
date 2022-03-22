@@ -3,11 +3,50 @@ import Rsb from "../img/rsb.jpg";
 import hero from "../img/halfpipe.jpeg";
 import rail from "../img/skate.jpeg";
 import boardslide from "../img/boardslide.jpeg";
-import mainHome from "../partials/_home.scss"
+import mainHome from "../partials/_home.scss";
+import Data from "../products.json";
 
 const Home = () => {
+  //   products = [
+  //     {
+  //       name: "Malto Pro Deck",
+  //       desc: "cool board",
+  //       size: 8.125,
+  //       price: 69.99
+  //     },
+  //     {
+  //       name: "Guy Pro Deck",
+  //       desc: "cool board",
+  //       size: 8.125,
+  //       price: 69.99
+  //     },
+  //     {
+  //       name: "Alverez Pro Deck",
+  //       desc: "cool board",
+  //       size: 8.125,
+  //       price: 69.99
+  //     },
+  //     {
+  //       name: "Standard Deck",
+  //       desc: "cool board",
+  //       size: 8.125,
+  //       price: 69.99
+  //     }
+  //   ]
+
+  //   filterPrice = (products, render) => {
+  //     let sixity = products.filter(prod => {
+  //       if(prod.price <= 61){
+  //         return render(prod)
+  //       }
+  //     })
+  //   }
+
+  // filterPrice(products, renderProducts)
+
   return (
     <>
+      {console.log(Data[0])}
       <header
         className="hero__wrap"
         style={{ backgroundImage: `url(${hero})` }}

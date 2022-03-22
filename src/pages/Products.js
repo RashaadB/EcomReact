@@ -15,12 +15,14 @@ import retro from "../img/nine_three_black.jpeg";
 import carolinaGirl from "../img/carolina_blu.jpeg";
 import tangerine from "../img/orange.jpeg";
 import mainProducts from "../partials/_products.scss"
+import FilterProducts from "../components/FilterProducts"
+
 
 const Products = () => {
   return (
     <>
       {/* <!-- header --> */}
-
+      <FilterProducts />
       <header>
         <div className="hero">
           <div className="hero-img">
