@@ -5,28 +5,28 @@
         "name": "The Niels",
         "deck": "Pro",
         "size": 8.125,
-        "price": "$70.00"
+        "price": 70.00
     },
     {   "id":2,
         "image": "./img/sad_girl.jpeg",
         "name": "The Sad Girl",
         "deck": "Standard",
         "size": 8.25,
-        "price": "$60.00"
+        "price": 60.00
     },
     {   "id":3,
         "image": "./img/nine_three.jpeg",
         "name": "Niels Retro",
         "deck": "Pro",
         "size": 8.125,
-        "price": "$70.00"
+        "price": 70.00
     },
     {   "id":4,
         "image": "./img/mint_green.jpeg",
         "name": "The Minty Girl",
         "deck": "Standard",
         "size": 8.25,
-        "price": "$60.00"
+        "price": 60.00
     },
     {   "id":5,
         "image": "./img/girl_bluOrange.jpeg",
