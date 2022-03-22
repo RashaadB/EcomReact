@@ -1,14 +1,16 @@
 import React from "react";
-
-import mainProducts from "../partials/_products.scss"
-import FilterProducts from "../components/FilterProducts"
-
+import data from "../products.json";
+import ProductsStyle from "../partials/_products.scss"
+import FilterProducts from "../components/FilterProducts";
 
 const Products = () => {
+  const updateProducts = () => {
+    return data.reverse();
+  };
   return (
     <>
       {/* <!-- header --> */}
-      <FilterProducts />
+
       <header>
         <div className="hero">
           <div className="hero-img">
@@ -29,7 +31,10 @@ const Products = () => {
       {/* <!-- items --> */}
 
       <h1 className="price">All Decks $60 | Click on Deck</h1>
-      <div className="decks">
+      <button onClick={updateProducts}>update</button>
+      <FilterProducts data={data} />
+
+      {/* <div className="decks">
         <div className="items">
           <h2>The Niels</h2>
           <a href="./img/brown.jpeg" target="_blank">
@@ -113,7 +118,7 @@ const Products = () => {
             <img src="./img/orange.jpeg" alt="tangerine" />
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
