@@ -1,7 +1,5 @@
 import React from "react";
 
-
-import mainHome from "../partials/_home.scss";
 import Data from "../products.json";
 
 const Home = () => {
@@ -47,7 +45,7 @@ const Home = () => {
       {console.log(Data[0])}
       <header
         className="hero__wrap"
-        style={{ backgroundImage: 'url("./img/halfpipe.jpeg")'}}
+        style={{ backgroundImage: 'url("./img/halfpipe.jpeg")' }}
       >
         <img className="logo_rsb" src="./img/rsb.jpg" alt="logo" />
 
@@ -89,7 +87,11 @@ const Home = () => {
       <section>
         <div className="row">
           <div className="column">
-            <img className="rail" src="../img/boardslide.jpeg" alt="boardsliding" />
+            <img
+              className="rail"
+              src="../img/boardslide.jpeg"
+              alt="boardsliding"
+            />
           </div>
 
           <div className="column">

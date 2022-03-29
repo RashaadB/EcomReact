@@ -1,4 +1,5 @@
 import React from "react";
+// import { Outlet } from "react-router-dom";
 
 
 
@@ -12,6 +13,7 @@ const Navbar = () => {
         <a href="/products">DECKS</a>
         <a href="/checkout">CHECKOUT</a>
       </nav>
+      {/* <Outlet></Outlet> */}
     </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import  "../partials/_checkout.scss";
+
 
 const Checkout = () => {
   return (

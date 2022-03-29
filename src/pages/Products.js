@@ -1,16 +1,45 @@
 import React from "react";
-import data from "../products.json";
-import ProductsStyle from "../partials/_products.scss";
+// import data from "../products.json";
+
 import FilterProducts from "../components/FilterProducts";
 
+
 const Products = () => {
-  const updateProducts = () => {
-    return data.reverse();
-  };
+  
   return (
     <>
-      {/* <!-- header --> */}
+    {/* search bar */}
+    
+    <div className="searchBtn" >
+        <div id="search-container">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search deck description here.."
+          />
+          <button id="search">Search</button>
+        </div>
+        <div id="buttons">
+          <button className="button-value" onClick="filterProducts('all')">
+            All
+          </button>
+          <button className="button-value" onClick="filterProducts('decks')">
+            Decks
+          </button>
+          <button className="button-value" onClick="filterProducts('price')">
+            Price
+          </button>
+          <button className="button-value" onClick="filterProducts('name')">
+            whatever
+          </button>
+        </div>
+        <div id="products"></div>
+      </div>
 
+
+
+      {/* <!-- header --> */}
+      <FilterProducts />
       <header>
         <div className="hero">
           <div className="hero-img">
@@ -31,8 +60,6 @@ const Products = () => {
       {/* <!-- items --> */}
 
       <h1 className="price">All Decks $60 | Click on Deck</h1>
-      <button onClick={updateProducts}>update</button>
-      <FilterProducts data={data} />
     </>
   );
 };
