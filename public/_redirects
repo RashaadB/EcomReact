@@ -1,1 +1,9 @@
-/*    /index.html   200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+   res.set(headers, [*])
+    Access-Control-Allow-Origin = "*"
