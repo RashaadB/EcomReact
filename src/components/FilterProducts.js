@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from "axios";
+
 
 // const api = axios.create({
 //   baseURL: `http://localhost:3001`,
@@ -37,7 +37,7 @@ class FilterProducts extends Component {
   }
 
   render() {
-    const { error, products } = this.state;
+    const {  products } = this.state;
     return (
       <>
         <div className="decks">
