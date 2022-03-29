@@ -2,16 +2,18 @@ const express = require("express");
 
 const mysql = require("mysql");
 const cors = require("cors");
-
+const app = express();
 app.use(cors());
 
 //create connection
 const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "Playsmart1414!!!",
-  database: "rsb_skateshop",
+  user: "be1d00d0ff3505",
+  host: "us-cdbr-east-05.cleardb.net",
+  password: "1ed6fec1",
+  database: "heroku_bb146e3c6412d82",
 });
+
+
 
 //connect
 db.connect((err) => {
@@ -21,8 +23,7 @@ db.connect((err) => {
   console.log("MySql connected...");
 });
 
-const app = express();
-app.use(express.json())
+// app.use(express.json())
 //fetch sql
 app.get("/getpost", (req, res) => {
   let sql = "SELECT * FROM products";
@@ -35,6 +36,10 @@ app.get("/getpost", (req, res) => {
 
 app.listen(3001, () => {
   console.log("Port is running on 3001!! ");
+});
+
+app.listen(process.env.PORT || Port, () => {
+  console.log(`Server running on port ${PORT}`);
 });
 
 // app.post("/create", (req, res) => {

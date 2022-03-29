@@ -1,30 +1,60 @@
 import React, { Component } from "react";
 import axios from "axios";
 
-
-const api = axios.create({
-  baseURL: `http://localhost:3001/getpost/`,
-});
+// const api = axios.create({
+//   baseURL: `http://localhost:3001`,
+// });
 
 class FilterProducts extends Component {
-  
- 
-
   constructor(props) {
     super(props);
-    api.get("/getpost/").then((res) => {
-      console.log(res.data);
-      this.setState({ products: res.data });
-     
-    });
+    this.state = {
+      products: [],
+      error: null,
+    };
+    // api.get("/getpost/").then((res) => {
+    //   console.log(res.data);
+    //   this.setState({ products: res.data });
+
+    // });
   }
-  
+  //react lifestyle fetching api take response turn into json
+  componentDidMount() {
+    fetch("https://rsb-skate-shop-heroku.herokuapp.com/")
+      .then((res) => res.json())
+      .then(
+        (data) => {
+          this.setState({
+            products: data,
+          });
+        },
+        (error) => {
+          this.setState({
+            error,
+          });
+        }
+      );
+  }
+
   render() {
+    const { error, products } = this.state;
     return (
       <>
-        {this.state.products.filter().map((decks) => (
-          <h2 key={decks.id}>{decks.deck_name}</h2>
-        ))}
+        <div className="decks">
+          {products.map((item, key) => (
+            <div key={key} className="items" style={{ paddingTop: "50px" }}>
+              <h2>{item.deck_name}</h2>
+              <a href="./img/brown.jpeg" target="_blank">
+                <img src={item.deck_image} alt="brown" />
+              </a>
+              <h2 style={{ paddingTop: "10px" }}>
+                {item.deck_spec}: {item.deck_size}
+              </h2>
+              <h2 style={{ paddingTop: "10px" }}>${item.deck_price}</h2>
+            </div>
+          ))}
+          ;
+        </div>
       </>
     );
   }
@@ -47,20 +77,20 @@ class FilterProducts extends Component {
 //   //   return data.reverse();
 //   // };
 
-//   return (
-//     <>
-//       {/* <div className="decks" />
-//         {data.data.filter().map((item, key) => (
-//           <div key={key} className="items" >
-//             <h2>{item.name}</h2>
-//             <a href="./img/brown.jpeg" target="_blank">
-//               <img src={item.image} alt="brown" />
-//             </a>
-//           </div>
-//         ))}
-//         ; */}
-//     </>
-//   );
+// return (
+//   <>
+//     <div className="decks" />
+//       {data.data.filter().map((item, key) => (
+//         <div key={key} className="items" >
+//           <h2>{item.name}</h2>
+//           <a href="./img/brown.jpeg" target="_blank">
+//             <img src={item.image} alt="brown" />
+//           </a>
+//         </div>
+//       ))}
+//       ;
+//   </>
+// );
 // };
 
 export default FilterProducts;
