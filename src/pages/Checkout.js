@@ -1,16 +1,26 @@
 import React from "react";
+import { userSchema } from "../Validations/userValidation";
 
+const createUser = async (event) => {
+  event.preventDefault();
+  let formData = {
+    name: event.target[0].value,
+    email: event.target[1].value,
+    password: event.target[2].value,
+  };
+  const isValid = await userSchema.isValid(formData);
+  console.log(isValid);
+};
 
 const Checkout = () => {
   return (
     <>
       {/* <!-- Checkout --> */}
-   
 
       <div className="rowCheckout">
         <div className="col-75">
           <div className="container">
-            <form action="/action_page.php">
+            <form action="/action_page.php" onSubmit={createUser}>
               <div className="rowCheckout">
                 <div className="col-50">
                   <h3>Billing Address</h3>
@@ -77,9 +87,15 @@ const Checkout = () => {
                   <h3>Payment</h3>
                   <label for="fname">Accepted Cards</label>
                   <div className="icon-container">
-                    <i className="fa fa-cc-visa" style={{ color: "navy blue" }}></i>
+                    <i
+                      className="fa fa-cc-visa"
+                      style={{ color: "navy blue" }}
+                    ></i>
                     <i className="fa fa-cc-amex" style={{ color: "blue" }}></i>
-                    <i className="fa fa-cc-mastercard" style={{ color: "red" }}></i>
+                    <i
+                      className="fa fa-cc-mastercard"
+                      style={{ color: "red" }}
+                    ></i>
                     <i
                       className="fa fa-cc-discover"
                       style={{ color: "orange" }}
@@ -132,7 +148,11 @@ const Checkout = () => {
                 <input type="checkbox" checked="checked" name="sameadr" />
                 Shipping address same as billing
               </label>
-              <input type="submit" value="Continue to checkout" className="btn" />
+              <input
+                type="submit"
+                value="Continue to checkout"
+                className="btn"
+              />
             </form>
           </div>
         </div>

@@ -3,20 +3,17 @@ import React from "react";
 
 import FilterProducts from "../components/FilterProducts";
 
-
 const Products = () => {
-  
   return (
     <>
-    {/* search bar */}
-    
-    <div className="searchBtn" >
+      {/* search bar */}
+
+      <div className="searchBtn">
         <div id="search-container">
           <input
             type="search"
             id="search-input"
             placeholder="Search deck description here.."
-           
           />
           <button id="search">Search</button>
         </div>
@@ -36,8 +33,6 @@ const Products = () => {
         </div>
         <div id="products"></div>
       </div>
-
-
 
       {/* <!-- header --> */}
       <FilterProducts />

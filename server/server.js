@@ -40,12 +40,7 @@ app.get("/getpost", (req, res) => {
 //   console.log("Port is running on 3001!! ");
 // });
 
-// app.listen(process.env.PORT || PORT, () => {
-//   console.log(`Server running on port ${PORT}`);
-// });
 
-// let port = process.env.PORT || 8080;
-// app.listen(PORT, () => console.log(`port is running on ${PORT}`));
 app.listen(process.env.PORT || 8080, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
