@@ -4,6 +4,10 @@ const mysql = require("mysql");
 const cors = require("cors");
 const app = express();
 app.use(cors());
+app.use(( res ) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authortization');
+  res.setHeader('Acces-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
 
 //create connection
 const db = mysql.createConnection({
