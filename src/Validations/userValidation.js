@@ -6,9 +6,6 @@ export const userSchema = yup.object().shape({
     .string()
     .email()
     .required(),
-  password: yup
-    .string()
-    .min(4)
-    .max(15).required,
+
 }); 
 
