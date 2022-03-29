@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-
 // const api = axios.create({
 //   baseURL: `http://localhost:3001`,
 // });
@@ -20,7 +19,10 @@ class FilterProducts extends Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("https://rsb-skate-shop-heroku.herokuapp.com")
+    fetch("https://rsb-skate-shop-heroku.herokuapp.com", {
+      mode: "cors",
+      credentials: "include",
+    })
       .then((res) => res.json())
       .then(
         (data) => {
@@ -37,7 +39,7 @@ class FilterProducts extends Component {
   }
 
   render() {
-    const {  products } = this.state;
+    const { products } = this.state;
     return (
       <>
         <div className="decks">
