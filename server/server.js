@@ -4,10 +4,10 @@ const mysql = require("mysql");
 const cors = require("cors");
 const app = express();
 app.use(cors());
-app.use(( res ) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authortization');
-  res.setHeader('Acces-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
+// app.use(cors( res ) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authortization');
+//   res.setHeader('Acces-Control-Allow-Methods', 'GET, POST, PATCH, DELETE');
 
 //create connection
 const db = mysql.createConnection({
@@ -42,26 +42,8 @@ app.listen(3001, () => {
   console.log("Port is running on 3001!! ");
 });
 
-app.listen(process.env.PORT || Port, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-// app.post("/create", (req, res) => {
-//   const name = req.body.name;
-//   const deck = req.body.deck;
-//   const size = req.body.size;
-//   const image = req.body.image;
-//   const price = req.body.price;
-
-//   db.query(
-//     "INSERT INTO Decks (name, deck, size, image, price) VALUES(?,?,?,?,?)",
-//     [name, deck, size, image, price],
-//     (err, result) => {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         res.send("Values Inserted");
-//       }
-//     }
-//   );
+// app.listen(process.env.PORT || Port, () => {
+//   console.log(`Server running on port ${PORT}`);
 // });
+
+

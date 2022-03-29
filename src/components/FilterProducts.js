@@ -21,7 +21,7 @@ class FilterProducts extends Component {
   componentDidMount() {
     fetch("https://rsb-skate-shop-heroku.herokuapp.com", {
       mode: "cors",
-      credentials: "include",
+      credentials: "true",
     })
       .then((res) => res.json())
       .then(
