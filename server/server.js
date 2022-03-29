@@ -38,9 +38,9 @@ app.get("/getpost", (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log("Port is running on 3001!! ");
-});
+// app.listen(3001, () => {
+//   console.log("Port is running on 3001!! ");
+// });
 
 app.listen(process.env.PORT || Port, () => {
   console.log(`Server running on port ${PORT}`);
