@@ -16,6 +16,7 @@ const Products = () => {
             type="search"
             id="search-input"
             placeholder="Search deck description here.."
+           
           />
           <button id="search">Search</button>
         </div>

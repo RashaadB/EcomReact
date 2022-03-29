@@ -41,6 +41,34 @@ class FilterProducts extends Component {
     const { products } = this.state;
     return (
       <>
+      {products.map((item, key) => (
+        <div className="searchBtn">
+          <div id="search-container">
+            <input
+              type="search"
+              id="search-input"
+              placeholder="Search deck description here.."
+            />
+            <button id="search">Search</button>
+          </div>
+          <div id="buttons">
+            <button className="button-value" onClick="filterProducts('all')">
+              All
+            </button>
+            <button className="button-value" onClick="filterProducts('decks')">
+              Decks
+            </button>
+            <button className="button-value" onClick="filterProducts('price')">
+              Price
+            </button>
+            <button className="button-value" onClick="filterProducts('name')">
+              whatever
+            </button>
+          </div>
+          <div id="products"></div>
+        </div>
+))}
+
         <div className="decks">
           {products.map((item, key) => (
             <div key={key} className="items" style={{ paddingTop: "50px" }}>
