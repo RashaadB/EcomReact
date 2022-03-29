@@ -19,7 +19,7 @@ class FilterProducts extends Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    res.set("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Origin", "*");
     fetch("https://rsb-skate-shop-heroku.herokuapp.com", {
       mode: "cors",
       credentials: "include",
