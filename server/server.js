@@ -17,8 +17,6 @@ const db = mysql.createConnection({
   database: "heroku_bb146e3c6412d82",
 });
 
-
-
 //connect
 db.connect((err) => {
   if (err) {
@@ -42,8 +40,9 @@ app.get("/getpost", (req, res) => {
 //   console.log("Port is running on 3001!! ");
 // });
 
-app.listen(process.env.PORT || Port, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// app.listen(process.env.PORT || PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
 
-
+let port = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`port is running on ${PORT}`));
