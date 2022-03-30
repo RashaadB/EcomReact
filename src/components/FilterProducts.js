@@ -18,7 +18,7 @@ class FilterProducts extends Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("https://rsb-skate-shop-heroku/", {
+    fetch("https://rsb-skate-shop-heroku.herokuapp.com/getpost", {
       mode: "cors",
       credentials: "true",
     })
