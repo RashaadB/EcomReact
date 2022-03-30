@@ -1,7 +1,10 @@
 {
   "name": "ecom-react-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node":
+"12.11.1"  },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.1.0",
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
