@@ -21,7 +21,7 @@ db.connect((err) => {
   console.log("MySql connected...");
 });
 
-// app.use(express.json());
+app.use(express.json());
 //fetch sql
 app.get("/getpost", (req, res) => {
   let sql = "SELECT * FROM products";
