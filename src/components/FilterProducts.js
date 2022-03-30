@@ -3,31 +3,29 @@ import React, { Component } from "react";
 //   baseURL: `http://localhost:3001`,
 // });
 
-class FilterProducts extends Component {
+class FilterProducts extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [],
       error: null,
     };
-    // api.get("/getpost/").then((res) => {
-    //   console.log(res.data);
-    //   this.setState({ products: res.data });
-
-    // });
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("https://git.heroku.com/rsb-skate-shop-heroku.git/getpost", {
+    fetch("localhost:8080/getpost", {
       mode: "cors",
       credentials: "true",
     })
       .then((res) => res.json())
       .then(
         (data) => {
-          this.setState({
-            products: data,
-          });
+          this.setState(
+            {
+              products: data,
+            },
+            console.log(data)
+          );
         },
         (error) => {
           this.setState({
