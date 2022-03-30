@@ -1,8 +1,8 @@
 const express = require("express");
-
+const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
-const app = express();
+
 app.use(cors());
 
 //create connection
@@ -13,7 +13,7 @@ const db = mysql.createConnection({
   database: "heroku_bb146e3c6412d82",
 });
 
-//connect
+//connect to above mention mysql server
 db.connect((err) => {
   if (err) {
     throw err;
@@ -21,7 +21,7 @@ db.connect((err) => {
   console.log("MySql connected...");
 });
 
-// app.use(express.json())
+// app.use(express.json());
 //fetch sql
 app.get("/getpost", (req, res) => {
   let sql = "SELECT * FROM products";
