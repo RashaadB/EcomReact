@@ -1,5 +1,8 @@
 import React from "react";
-import "./App.css";
+import "./styles/Home.css"
+import "./styles/Shared.css"
+import "./styles/Checkout.css"
+import"./styles/Products.css"
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Products from "./pages/Products";

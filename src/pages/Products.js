@@ -3,6 +3,24 @@ import React from "react";
 
 import FilterProducts from "../components/FilterProducts";
 
+// const button = document.querySelectorAll("[data-carousel-button")
+
+// button.forEach(buttons => {
+//   button.addEventListener("click",()=>{
+//     const offset = button.dataset.carouselButton === "next" ? 1 : -1
+//     const slides = button.closest("[data-carousel]").querySelector("[data-slides]")
+
+//     const activeSlide = slides.querySelector("[data-active]")
+//     let newIndex = [...slides.children].indexOf(activeSlide) + offset
+//     if (newIndex < 0)  newIndex = slides.children.length - 1
+//     if (newIndex >= slides.children.length ) newIndex = 0
+
+//     slides.children[newIndex].dataset.active = true
+//     delete activeSlide.dataset.active
+//   })
+// })
+ 
+
 const Products = () => {
   return (
     <>
@@ -22,40 +40,49 @@ const Products = () => {
             All
           </button>
           <button className="button-value" onClick="filterProducts('decks')">
-            Decks
+            Pro
           </button>
           <button className="button-value" onClick="filterProducts('price')">
-            Price
+            Standard
           </button>
           <button className="button-value" onClick="filterProducts('name')">
-            whatever
+            Price
           </button>
         </div>
         <div id="products"></div>
       </div>
 
       {/* <!-- header --> */}
-      <FilterProducts />
+     
       <header>
-        <div className="hero">
-          <div className="hero-img">
-            <img src="../img/girl.jpeg.crdownload" alt="" />
-            <h1>Don't Skate Alone.</h1>
+        
+   
+         
+        
+<div>
+          <div className="hero">
+            <div className="hero-img">
+              <img src="../img/girl.jpeg.crdownload" alt="img1" />
+              <h1>Don't Skate Alone.</h1>
+            </div>
+
+            <div className="hero-img">
+              <img src="../img/pink.jpeg" alt="img2" />
+              <h1>Skate witch-yo.</h1>
+            </div>
+
+            <div className="hero-img">
+              <img src="../img/skate_team.jpeg" alt="img3" />
+              <h1>GIRL.</h1>
+            </div>
           </div>
-          <div className="hero-img">
-            <img src="../img/pink.jpeg" alt="" />
-            <h1>Skate witch-yo.</h1>
-          </div>
-          <div className="hero-img">
-            <img src="../img/skate_team.jpeg" alt="" />
-            <h1>GIRL.</h1>
-          </div>
-        </div>
+          </div> 
       </header>
 
       {/* <!-- items --> */}
 
-      <h1 className="price">All Decks $60 | Click on Deck</h1>
+      <h1 className="price">| Click on Deck |</h1>
+      <FilterProducts />
     </>
   );
 };

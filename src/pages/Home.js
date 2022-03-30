@@ -1,48 +1,13 @@
 import React from "react";
 
-import Data from "../products.json";
+
 
 const Home = () => {
-  //   products = [
-  //     {
-  //       name: "Malto Pro Deck",
-  //       desc: "cool board",
-  //       size: 8.125,
-  //       price: 69.99
-  //     },
-  //     {
-  //       name: "Guy Pro Deck",
-  //       desc: "cool board",
-  //       size: 8.125,
-  //       price: 69.99
-  //     },
-  //     {
-  //       name: "Alverez Pro Deck",
-  //       desc: "cool board",
-  //       size: 8.125,
-  //       price: 69.99
-  //     },
-  //     {
-  //       name: "Standard Deck",
-  //       desc: "cool board",
-  //       size: 8.125,
-  //       price: 69.99
-  //     }
-  //   ]
-
-  //   filterPrice = (products, render) => {
-  //     let sixity = products.filter(prod => {
-  //       if(prod.price <= 61){
-  //         return render(prod)
-  //       }
-  //     })
-  //   }
-
-  // filterPrice(products, renderProducts)
+  
 
   return (
     <>
-      {console.log(Data[0])}
+      
       <header
         className="hero__wrap"
         style={{ backgroundImage: 'url("./img/halfpipe.jpeg")' }}
@@ -95,8 +60,8 @@ const Home = () => {
           </div>
 
           <div className="column">
-            <h2 className="Decks">DECKS</h2>
-            <p className="deck_para">
+            <h2 className="RSB">DECKS</h2>
+            <p className="RSB_para">
               The decks are made from durable seven-layered American Maple wood,
               that are interlaid by water-based glue and put together by high
               pressure. All of the decks are 33" long, with a deck-width of

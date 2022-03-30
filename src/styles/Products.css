@@ -1,0 +1,128 @@
+.hero img {
+    width: 100%;
+    height: 219px;
+  }
+  h2 {
+    color: #000;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    grid-gap: 0rem;
+    background-color: #fff;
+    padding-top: 40px;
+    margin-bottom: 25px;
+    border-bottom: #000 solid;
+    background-color: #000;
+    border: solid #fd6721;
+  }
+  .hero h1 {
+    text-align: center;
+    color: #fff;
+  }
+  .hero h1:hover {
+    background: #fd6721;
+    color: #000;
+  }
+  
+  .decks img {
+    width: 240px;
+    height: 240px;
+    box-shadow: 10px 10px 20px #fd6721;
+  }
+  
+  .decks {
+    display: grid;
+  
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    grid-gap: 10px;
+    background-color: #fff;
+    padding-bottom: 70px;
+    padding-top: 50px;
+    border: solid #fd6721;
+  }
+  
+  .price {
+    text-align: center;
+  }
+  .items-descrption img {
+    width: 50%;
+  }
+  
+  @media (max-width: 1000px) {
+    .decks {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 509px) {
+    .decks {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  html {
+    background-color: #242f3b;
+  }
+  
+  .price:hover {
+    background: #fd6721;
+    color: #000;
+  }
+  .price {
+    color: #fff;
+  }
+  
+  /* search bar css */
+  .searchBtn {
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  
+  #search-container {
+    margin: 1em 0;
+  }
+  
+  #search-container input {
+    background-color: transparent;
+    width: 40%;
+    border-bottom: 2px solid #fd6721;
+    padding: 1em 0.3em;
+    border-radius: 5px;
+  }
+  
+  #search-container input:focus {
+    border-bottom-color: #fd6621;
+  }
+  
+  #search-container button {
+    padding: 1em 2em;
+    margin-left: 1em;
+    background-color: #fd6721;
+    color: #ffffff;
+    border-radius: 10%;
+  
+    margin-top: 0.5em;
+  }
+  
+  .button-value {
+    position: relative;
+    left: -60px;
+    border: 2px solid #fd6721;
+    padding: 1em 2.2em;
+    border-radius: 3em;
+    margin: 20px;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .active {
+    background-color: #fd6721;
+    color: #fd6621;
+  }
+  
