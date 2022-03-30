@@ -24,6 +24,26 @@ import FilterProducts from "../components/FilterProducts";
 const Products = () => {
   return (
     <>
+    <header>
+    
+          <div className="hero">
+            <div className="hero-img">
+              <img src="../img/girl.jpeg.crdownload" alt="img1" />
+              <h1>Don't Skate Alone.</h1>
+            </div>
+
+            <div className="hero-img">
+              <img src="../img/pink.jpeg" alt="img2" />
+              <h1>Skate witch-yo.</h1>
+            </div>
+
+            <div className="hero-img">
+              <img src="../img/skate_team.jpeg" alt="img3" />
+              <h1>GIRL.</h1>
+            </div>
+          </div>
+           
+      </header>
       {/* search bar */}
 
       <div className="searchBtn">
@@ -54,30 +74,12 @@ const Products = () => {
 
       {/* <!-- header --> */}
      
-      <header>
+      
         
    
          
         
-<div>
-          <div className="hero">
-            <div className="hero-img">
-              <img src="../img/girl.jpeg.crdownload" alt="img1" />
-              <h1>Don't Skate Alone.</h1>
-            </div>
 
-            <div className="hero-img">
-              <img src="../img/pink.jpeg" alt="img2" />
-              <h1>Skate witch-yo.</h1>
-            </div>
-
-            <div className="hero-img">
-              <img src="../img/skate_team.jpeg" alt="img3" />
-              <h1>GIRL.</h1>
-            </div>
-          </div>
-          </div> 
-      </header>
 
       {/* <!-- items --> */}
 
