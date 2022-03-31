@@ -14,7 +14,7 @@ class FilterProducts extends React.Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("https://api.netlify.com/api/getpost", {
+    fetch("https://exquisite-faloodeh-ab6fc2.netlify.app/products/getpost", {
       mode: "cors",
       credentials: "true",
     })
