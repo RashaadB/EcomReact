@@ -19,30 +19,27 @@ import FilterProducts from "../components/FilterProducts";
 //     delete activeSlide.dataset.active
 //   })
 // })
- 
 
 const Products = () => {
   return (
     <>
-    <header>
-    
-          <div className="hero">
-            <div className="hero-img">
-              <img src="../img/girl.jpeg.crdownload" alt="img1" />
-              <h1>Don't Skate Alone.</h1>
-            </div>
-
-            <div className="hero-img">
-              <img src="../img/pink.jpeg" alt="img2" />
-              <h1>Skate witch-yo.</h1>
-            </div>
-
-            <div className="hero-img">
-              <img src="../img/skate_team.jpeg" alt="img3" />
-              <h1>GIRL.</h1>
-            </div>
+      <header>
+        <div className="hero">
+          <div className="hero-img">
+            <img src="../img/girl.jpeg.crdownload" alt="img1" />
+            <h1>Don't Skate Alone.</h1>
           </div>
-           
+
+          <div className="hero-img">
+            <img src="../img/pink.jpeg" alt="img2" />
+            <h1>Skate witch-yo.</h1>
+          </div>
+
+          <div className="hero-img">
+            <img src="../img/skate_team.jpeg" alt="img3" />
+            <h1>GIRL.</h1>
+          </div>
+        </div>
       </header>
       {/* search bar */}
 
@@ -51,7 +48,7 @@ const Products = () => {
           <input
             type="search"
             id="search-input"
-            placeholder="Search deck description here.."
+            placeholder="Search deck  description here.."
           />
           <button id="search">Search</button>
         </div>
@@ -73,13 +70,6 @@ const Products = () => {
       </div>
 
       {/* <!-- header --> */}
-     
-      
-        
-   
-         
-        
-
 
       {/* <!-- items --> */}
 

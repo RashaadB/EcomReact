@@ -27,7 +27,7 @@ app.get("/getpost", (req, res) => {
   let sql = "SELECT * FROM products";
   db.query(sql, (err, results) => {
     if (err) throw err;
-    // console.log(results);
+    console.log(results);
     res.json(results);
   });
 });

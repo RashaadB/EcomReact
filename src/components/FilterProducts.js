@@ -17,7 +17,7 @@ class FilterProducts extends React.Component {
       mode: "cors",
       credentials: "true",
     })
-      .then((res) => res.json())
+      .then((res) => res.json(data))
       .then(
         (data) => {
           this.setState(
