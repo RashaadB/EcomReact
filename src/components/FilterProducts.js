@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 // const api = axios.create({
 //   baseURL: `http://localhost:3001`,
 // });
@@ -13,7 +13,7 @@ class FilterProducts extends React.Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("localhost:8080/getpost", {
+    fetch("http://localhost:8080/getpost", {
       mode: "cors",
       credentials: "true",
     })
