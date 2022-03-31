@@ -74,7 +74,7 @@ const Products = () => {
       {/* <!-- items --> */}
 
       <h1 className="price">| Click on Deck |</h1>
-      <FilterProducts key={data} />
+      <FilterProducts  />
     </>
   );
 };
