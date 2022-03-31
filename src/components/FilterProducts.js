@@ -13,13 +13,14 @@ class FilterProducts extends React.Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("https://exquisite-faloodeh-ab6fc2.netlify.app/getpost", {
+    fetch("https://localhost:8080/getpost", {
       mode: "cors",
       credentials: "true",
     })
       .then((res) => res.json())
       .then(
         (data) => {
+          console.log(data);
           this.setState({
             products: data,
           });
