@@ -42,7 +42,7 @@ const Products = () => {
         </div>
       </header>
       {/* search bar */}
-      <FilterProducts  />
+
       <div className="searchBtn">
         <div id="search-container">
           <input
@@ -51,7 +51,6 @@ const Products = () => {
             placeholder="Search deck  description here.."
           />
           <button id="search">Search</button>
-          
         </div>
         <div id="buttons">
           <button className="button-value" onClick="filterProducts('all')">
@@ -75,7 +74,7 @@ const Products = () => {
       {/* <!-- items --> */}
 
       <h1 className="price">| Click on Deck |</h1>
-      
+      <FilterProducts  />
     </>
   );
 };
