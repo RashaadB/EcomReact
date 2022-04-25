@@ -2,24 +2,24 @@ const express = require("express");
 const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
-// app.use(express.json());
+app.use(express.json());
 app.use(cors());
 
 //create connection
-const db = mysql.createPool({
+const db = mysql.createConnection({
   user: "root",
   host: "localhost",
   password: "Playsmart1414!!!",
   database: "rsb_skateshop",
 });
 
-//connect to above mention mysql server
-// db.connect((err) => {
-//   if (err) {
-//     throw err;
-//   }
-//   console.log("MySql connected...");
-// });
+// connect to above mention mysql server
+db.connect((err) => {
+  if (err) {
+    throw err;
+  }
+  console.log("MySql connected...");
+});
 
 //fetch sql
 

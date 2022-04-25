@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-// const api = axios.create({
-//   baseURL: `http://localhost:3001`,
-// });
+import { products } from "../products.json";
+import Products from "../pages/Products";
+
 
 class FilterProducts extends React.Component {
   constructor(props) {
@@ -14,31 +14,24 @@ class FilterProducts extends React.Component {
   }
   //react lifestyle fetching api take response turn into json
   componentDidMount() {
-    fetch("https://exquisite-faloodeh-ab6fc2.netlify.app/products/getpost", {
-      mode: "cors",
-      credentials: "true",
-    })
-      .then((res) => res.json())
-      .then(
-        (data) => {
-          console.log(data);
-          this.setState({
-            products: data,
-          });
-        },
-        (error) => {
-          this.setState({
-            error,
-          });
-        }
-      );
+    axios.get("http://localhost:8080/getpost")
+      .then((res) => { 
+        this.setState({products: res.data})
+      }).catch((error) =>{
+          throw error
+          
+      });
+      
+      
+    
+      
   }
 
   render() {
     const { products } = this.state;
     return (
       <>
-        {products.map((item, key) => (
+      
           <div className="searchBtn">
             <div id="search-container">
               <input
@@ -70,22 +63,22 @@ class FilterProducts extends React.Component {
             </div>
             <div id="products"></div>
           </div>
-        ))}
+        
 
         <div className="decks">
+         
           {products.map((item, key) => (
-            <div key={key} className="items" style={{ paddingTop: "50px" }}>
-              <h2>{item.deck_name}</h2>
-              <a href="./img/brown.jpeg" target="_blank">
-                <img src={item.deck_image} alt="brown" />
-              </a>
-              <h2 style={{ paddingTop: "10px" }}>
-                {item.deck_spec}: {item.deck_size}
-              </h2>
-              <h2 style={{ paddingTop: "10px" }}>${item.deck_price}</h2>
-            </div>
-          ))}
-          ;
+          <div key={key} className="items" style={{ paddingTop: "50px" }}>
+            <h2>{item.deck_name}</h2>
+            <a href="./img/brown.jpeg" target="_blank">
+              <img src={item.deck_image} alt="brown" />
+            </a>
+            <h2 style={{ paddingTop: "10px" }}>
+              {item.deck_spec}: {item.deck_size}
+            </h2>
+            <h2 style={{ paddingTop: "10px" }}>${item.deck_price}</h2>
+          </div>
+          ))} ;
         </div>
       </>
     );
