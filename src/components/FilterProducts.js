@@ -62,6 +62,7 @@ class FilterProducts extends React.Component {
               </button>
             </div>
             <div id="products"></div>
+            <h1 className="price">| Click on Deck |</h1>
           </div>
         
 

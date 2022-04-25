@@ -1,5 +1,4 @@
 import React from "react";
- 
 
 import FilterProducts from "../components/FilterProducts";
 
@@ -41,12 +40,10 @@ const Products = () => {
           </div>
         </div>
       </header>
-      
 
       {/* <!-- items --> */}
 
-      <h1 className="price">| Click on Deck |</h1>
-      <FilterProducts  />
+      <FilterProducts />
     </>
   );
 };
