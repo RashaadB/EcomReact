@@ -41,35 +41,7 @@ const Products = () => {
           </div>
         </div>
       </header>
-      {/* search bar */}
-
-      {/* <div className="searchBtn">
-        <div id="search-container">
-          <input
-            type="search"
-            id="search-input"
-            placeholder="Search deck  description here.."
-          />
-          <button id="search">Search</button>
-        </div>
-        <div id="buttons">
-          <button className="button-value" onClick="filterProducts('all')">
-            All
-          </button>
-          <button className="button-value" onClick="filterProducts('decks')">
-            Pro
-          </button>
-          <button className="button-value" onClick="filterProducts('price')">
-            Standard
-          </button>
-          <button className="button-value" onClick="filterProducts('name')">
-            Price
-          </button>
-        </div>
-        <div id="products"></div>
-      </div> */}
-
-      {/* <!-- header --> */}
+      
 
       {/* <!-- items --> */}
 
