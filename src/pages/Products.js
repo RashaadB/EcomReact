@@ -43,7 +43,7 @@ const Products = () => {
       </header>
       {/* search bar */}
 
-      <div className="searchBtn">
+      {/* <div className="searchBtn">
         <div id="search-container">
           <input
             type="search"
@@ -67,7 +67,7 @@ const Products = () => {
           </button>
         </div>
         <div id="products"></div>
-      </div>
+      </div> */}
 
       {/* <!-- header --> */}
 
